@@ -27,7 +27,7 @@ foreach ($array[0]['pokemon'] as $chave => $valor) {
     <div class="row">
     <h1>Branch do Bruno</h1>
     <h2>Testa por vagner</h2>
-<?php for($i=0; $i < 4; $i++):?>
+<?php for($i=0; $i < 5; $i++):?>
                 <div class="col-lg-3 mb-3">
                     <div class="card" >
                                 <img class="card-img-top bg-primary" src="<?=$value['img'];?>" alt="Imagem de capa do card">
