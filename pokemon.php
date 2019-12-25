@@ -19,7 +19,7 @@ $array[]= json_decode(file_get_contents('https://raw.githubusercontent.com/Biuni
 <div class="container">
     <div class="row">
     <h1>Branch do Bruno</h1>
-    <h2>Testa por vagner</h2>
+    <h2>Testado por vagner</h2>
 <?php foreach ($array[0]['pokemon'] as $key => $value): ?>
                 <div class="col-lg-3 mb-3">
                     <div class="card" >
