@@ -113,31 +113,49 @@ $limit = ceil($size / $interval);
 <div class="container">
 <nav aria-label="Navegação de página exemplo">
   <ul class="pagination">
+    <?php
+    if($page > 1){ ?>
+        <li class="page-item"><a class="page-link" href="?p=1">Inicio</a></li>
+
+    <?php } ?>                                       
     <li class="page-item"><a class="page-link" href="?p=<?=$page - 1 > 1 ? $page - 1 : '1' ?>">Anterior</a></li>
     
     <?php
         $quantityLinks = 3;
 
-        if($page - $quantityLinks > 0){
             for ($i=0; $i < $quantityLinks; $i++) { 
                 $linkDow = $page - ($quantityLinks - $i);
-                ?>
-                <li class="page-item"><a class="page-link" href="?p=<?=$linkDow?>"><?=$linkDow?></a></li>
-                <?php
+                if($linkDow != $page && $linkDow > 0) {
+                    ?>
+                    <li class="page-item"><a class="page-link" href="?p=<?=$linkDow?>"><?=$linkDow?></a></li>
+                    <?php
+                }
             }
-        } else {
-            $loops = ($page - $quantityLinks) + ($quantityLinks - 1);
-            for ($i= 1; $i <= $loops; $i++) {
-            ?>  
-                <li class="page-item"><a class="page-link" href="?p=<?=$i?>"><?=$i?></a></li>
-            <?php
-
-            }
-        }
 
     ?>
     <li class="page-item active"><a class="page-link" href="#"><?=$page?></a></li>
+    <?php
+
+
+for ($i= 1; $i <= $quantityLinks; $i++) {
+    $linkUp = $page +$i;
+    if($linkUp <= $limit){
+            ?>  
+                <li class="page-item"><a class="page-link" href="?p=<?=$linkUp ?>"><?=$linkUp?></a></li>
+            <?php
+
+}
+            }
+
+
+    ?>
     <li class="page-item"><a class="page-link" href="?p=<?=$page + 1 <= $limit ? $page + 1 : $limit ?>">Próximo</a></li>
+    
+  <?php 
+  if($page < $limit){ ?>  
+    <li class="page-item"><a class="page-link" href="?p=<?=$limit?>">Fim</a></li>
+  <?php }?>
+  
   </ul>
 </nav>
 </div>
