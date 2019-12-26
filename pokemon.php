@@ -48,37 +48,11 @@ $limit = ceil($size / $interval);
 
 
         }
-//var_dump($array);
+
 
 ?>
 
-<!-- <div class="container">
-<h1>Branch do Bruno</h1>
-    <h2>Testa por vagner</h2>
-    <div class="row">
-    
-    
-        <?php for($i=0; $i < $max; $i++):?>
-                        <div class="col-lg-3 mb-3">
-                            <div class="card" >
-                                        <img class="card-img-top bg-primary" src="<?=$value[$i]['img'];?>" alt="Imagem de capa do card">
-                                    <div class="card-body ">
-                                            <h5 class="card-title"><?=$value[$i]['name'];?></h5>
-                                            <p class="card-text"><?=$value[$i]['height'];?></p>
-                                            <p class="card-text"><?=$value[$i]['weight'];?></p>
-                                            <p class="card-text"><?=$value[$i]['candy'];?></p>
-                                            <?php foreach($value[$i]['type'] as $val): ?>
-                                            <a href="#" class="btn btn-primary"><?=$val;?></a>
-                                            <?php endforeach;?>
-                                    </div>
-                            </div>
-                    
-                        </div>
-            
-            <?php endfor; ?>
-    </div>
-</div>
-<hr> -->
+
 
 <div class="container">
 <h1>RENDER LIST</h1>
