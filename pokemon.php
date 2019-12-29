@@ -13,14 +13,21 @@
 
 $array[]= json_decode(file_get_contents('https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json'), true);
 
+foreach ($array[0]['pokemon'] as $chave => $valor) {
+    
+    $key = $chave;
+    $value = $valor;
+
+
+}
 
 ?>
 
 <div class="container">
     <div class="row">
     <h1>Branch do Bruno</h1>
-    <h2>Testado por vagner</h2>
-<?php foreach ($array[0]['pokemon'] as $key => $value): ?>
+    <h2>Testa por vagner</h2>
+<?php for($i=0; $i < 4; $i++):?>
                 <div class="col-lg-3 mb-3">
                     <div class="card" >
                                 <img class="card-img-top bg-primary" src="<?=$value['img'];?>" alt="Imagem de capa do card">
@@ -37,7 +44,7 @@ $array[]= json_decode(file_get_contents('https://raw.githubusercontent.com/Biuni
             
                 </div>
     
-<?php endforeach ?>
+    <?php endfor; ?>
     </div>
 </div>
 
